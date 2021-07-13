@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <Header />
+    <Header :menuLinks="menuLinks"/>
     <Main :comics="comics" />
     <SectionBlu />
     <Footer />
@@ -25,6 +25,48 @@ export default {
   data: function() {
     return {
       comics: comicsJson,
+      menuLinks: [
+              {
+                href: '#',
+                name: 'CHARACTERS',
+              },
+              {
+                href: '#',
+                name: 'COMICS',
+              },
+              {
+                href: '#',
+                name: 'MOVIES',
+              },
+              {
+                href: '#',
+                name: 'TV',
+              },
+              {
+                href: '#',
+                name: 'GAMES',
+              },
+              {
+                href: '#',
+                name: 'COLLECTIBLES',
+              },
+              {
+                href: '#',
+                name: 'VIDEOS',
+              },
+              {
+                href: '#',
+                name: 'FANS',
+              },
+              {
+                href: '#',
+                name: 'NEWS',
+              },
+              {
+                href: '#',
+                name: 'SHOP',
+              },
+      ], 
     };
   },
 };

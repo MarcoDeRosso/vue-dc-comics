@@ -7,16 +7,7 @@
 
       <div class="menu">
         <ul>
-          <li><a href="">CHARACTERS</a></li>
-          <li><a href="">COMICS</a></li>
-          <li><a href="">MOVIES</a></li>
-          <li><a href="">TV</a></li>
-          <li><a href="">GAMES</a></li>
-          <li><a href="">COLLECTIBLES</a></li>
-          <li><a href="">VIDEOS</a></li>
-          <li><a href="">FANS</a></li>
-          <li><a href="">NEWS</a></li>
-          <li><a href="">SHOP</a></li>
+          <li v-for="(links,index) in menuLinks" :key="index"><a :href="links.href">{{links.name}}</a></li>
         </ul>
       </div>
     </nav>
@@ -26,17 +17,9 @@
 <script>
 export default {
   name: 'Header',
-  data: function() {
-    //TODO: stampare il menu dinamicamente dai data
-    /* menuLinks: [
-      {
-        href: '#',
-        name: 'CHARACTERS',
-      },
-      {},
-      {},
-    ]; */
-  },
+  props:{
+    menuLinks:Array,
+  }
 };
 </script>
 
