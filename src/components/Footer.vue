@@ -134,7 +134,6 @@ export default {
 
 .social {
   background-color: #303030;
-  height: 80px;
 
   .container {
     z-index: 1;
